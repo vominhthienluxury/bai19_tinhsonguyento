@@ -3,28 +3,37 @@
 
 #include <iostream>
 using namespace std;
-int main()
-{
-	cout << "KIEM TRA SO CO PHAI SO NGUYEN TO KHONG!\n";
-
-	int so;
-	cout << "Nhap so: "; cin >> so;
+int main() {
+	int n;
 	int dem = 0;
-	for (int i=1 ; i <= so; i++)
+	cout << "nhap so:\n"; cin >> n;
+	for (int y = 1; y <= n; y++) {
+		dem = 0;
+		for (int i = 1; i <= y; i++)
+		{
+			if (y % i == 0) {
+				dem++;
+
+			}
+		}
+		if (dem == 2) {
+			cout << y << " ";
+		}
+	}/*
+	for (int i = 1; i <= n; i++)
 	{
-		if (so % i == 0) {
+		if (n % i == 0) {
 			dem++;
 
 		}
 	}
-	cout << "So dem = " << dem << endl;
-	if (dem==2)
-	{
-		cout << "So " << so << " la so nguyen to\n";
+	//cout << "so dem =" << dem << endl;
+	if (dem == 2) {
+		cout << "So " << n << " la so nguyen to\n";
 	}
-	else
-	{
-		cout << "So " << so << " KHONG PHAI LA SO NGUYEN TO\n";
-	}
+	else{
+		cout << "So " << n << " khong phai la so nguyen to\n";
+	}*/
 	return 0;
+
 }
